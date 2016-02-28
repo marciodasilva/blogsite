@@ -94,7 +94,6 @@ def create_new_post(blog_id):
         return render_template('new_post.html', blog_id=blog_id)
     else:
         title = request.form['title']
-        print(title)
         content = request.form['content']
         user = User.get_by_email(session['email'])
 
